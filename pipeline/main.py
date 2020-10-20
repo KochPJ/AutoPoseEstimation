@@ -177,11 +177,11 @@ def create_labels():
     global_regression = False
     icp_point2point = True
     icp_point2plane = False
-    mode = 'new_pred'
+    mode = 'pred'
 
     plot = False
-    get_segmentation_labels = False
-    get_target_point_cloud = True
+    get_segmentation_labels = True
+    get_target_point_cloud = False
     get_target_pose_label = False
     reference_point = np.array([-31, -823, -23])
 
