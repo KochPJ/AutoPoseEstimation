@@ -1,18 +1,29 @@
 import numpy as np
 
-# define your client here or import
+# define your own robot client here or import
 class UR5RobotClient:
 	def __init__(self, ip):
 		raise NotImplemented
 
+# define your gripper client here or import
+class GripperClient:
+	def __init__(self, ip):
+		raise NotImplemented
+
+	def open(self):
+		raise NotImplemented
+
+	def close(self):
+		raise NotImplemented
 
 class RobotController:
 	
 	def __init__(self):
-		self.robotClient = UR5RobotClient('127.0.0.1:50052')
+		self.robotClient = UR5RobotClient('')
+		self.gripperClient = GripperClient('')
 
 	def move_joints(self, target, moveType="p", vel=0.1, acc=0.1):
-		self.robotClient.SetQTarget(target, moveType, vel, acc)
+		self.robotClient.GripperClient(target, moveType, vel, acc)
 		
 	def get_pose(self, return_mm = True):
 		currentPose = self.robotClient.GetCurrentCartPose()
@@ -84,4 +95,11 @@ class RobotController:
 		else:
 			at_target = False
 		return at_target
+
+	def close_gripper(self):
+		self.gripperClient.close()
+
+	def open_gripper(self):
+		self.gripperClient.open()
+
 
