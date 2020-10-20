@@ -2,11 +2,13 @@
 
 # Installation:
 
-Download the data for each module as described in their README.
+1. Download the data for each module as described in their README
+
+2. Implement your own robot/gripper client
 
 
 # Run:
 
-1. run the user iterface from pipeline/main.py
+1. set the working direktory to the AutoPoseEstimation dir
 
-2. set the working direktory to the AutoPoseEstimation dir
+2. run the user iterface from pipeline/main.py
