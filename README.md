@@ -6,6 +6,8 @@
 
 2. Implement your own robot/gripper client
 
+3. Install missing dependencies
+
 
 # Run:
 
