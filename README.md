@@ -29,7 +29,7 @@ The Terminal User Interface gives you the following options:
 The steps 1, 7, 9, and 10 of the Terminal User Interface are hardware dependent (please see the Hardware section for setup instructions). The rest of the steps can be used with either data aquired by your setup, or with our data (please see the Data section for download instructions). 
 
 # Hardware
-In order to conduct your own grasping experiments or aquire new data you need a RGB-D Camera, an industrial robot armm, and a gripper. We use an "Realsense-435" depth camera, the "UR-5" robot arm, and the "Robotiq 2F-85" gripper. 
+In order to conduct your own grasping experiments or aquire new data you need a RGB-D Camera, an industrial robot armm, and a gripper. We use an "Realsense-435" depth camera, the "UR-5" robot arm, and the "Robotiq 2F-85" gripper. Futhermore, you need to find the hand-eye-calibration for your setup, and adapt the robot view points used for data acquisition and grasping.
 
 1. Robot and Gripper: We are not providing any drivers for the robot and gripper. If you want to use your own setup you will need to write your own drivers and comunication. We provide a "robot and gripper" controller in "robotcontroller/TestController.py". It uses a "robot and gripper" client to interact with the hardware. You can take this as a starting point to connect your hardware. Please make sure that all functions in the "RobotController"are callable. 
  
