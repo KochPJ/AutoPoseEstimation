@@ -18,8 +18,8 @@ import transforms3d
 import pipeline.grasping_utils as grasp_utils
 
 
-root = str(Path(__file__).resolve().parent.parent)
-
+root = str(Path(__file__).resolve().parent)
+reference_point = np.array([-31, -823, -23])
 
 def acquire_new_data_from_object():
     # create Depth Cam
@@ -145,7 +145,7 @@ def acquire_new_data_from_object():
 
 
 def create_labels():
-    names = sorted(os.listdir(os.path.join(Path(__file__).resolve().parent.parent, 'data_generation/data')))
+    names = sorted(os.listdir(os.path.join(Path(__file__).resolve().parent, 'data_generation/data')))
     while True:
         print('____________________________________________________________________')
         object_names = get_selection(names, 'Select the objects for which labels will be created. \n '
@@ -183,7 +183,6 @@ def create_labels():
     get_segmentation_labels = True
     get_target_point_cloud = False
     get_target_pose_label = False
-    reference_point = np.array([-31, -823, -23])
 
     elapsed_times = []
     for object_name in object_names:
@@ -277,7 +276,6 @@ def create_pose_data():
                     continue
             else:
                 get_extra_labels = False
-            reference_point = np.array([-31, -823, -23])
             return label_gen.create_pose_data(root,
                                               classes,
                                               ds_name,
