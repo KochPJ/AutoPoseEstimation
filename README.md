@@ -75,7 +75,7 @@ All data used in the components of this project can be downloaded. A download li
 # Experiments
 You can reproduce our experiments with the Terminal User Interface. 
 1. You can use the ["eval.py"](https://github.com/KochPJ/AutoPoseEstimation/blob/main/experiments/eval.py) to evaluate the ADD performance of our pose estimation model. 
-2. You can use the ["gt_test.py"](https://github.com/KochPJ/AutoPoseEstimation/blob/main/experiments/gt_test.py) to evaluate the IoU, accurancy, precision, recall, and f1 score of the segmentation model and background subtraction model, with respekt to 20% hand labelled data. 
+2. You can use the ["gt_test.py"](https://github.com/KochPJ/AutoPoseEstimation/blob/main/experiments/gt_test.py) to evaluate the IoU, accurancy, precision, recall, and f1 score of the segmentation model and background subtraction model, with respekt to 20% hand labelled data. Download the reference standard [here](https://github.com/KochPJ/AutoPoseEstimation/blob/main/experiments/README.md).
 3. We use the ["train_pose_estimation_exp.py"](https://github.com/KochPJ/AutoPoseEstimation/blob/main/experiments/train_pose_estimation_exp.py) to train multiple pose estimation models with a decreasing numer of view points, and with or without extra data. You can use the ["eval_exp.py"](https://github.com/KochPJ/AutoPoseEstimation/blob/main/experiments/eval_exp.py) to evaluate how the ADD performacne changes when training pose estimation with data from less view points, and what effect the extra data has on the training. You can also quickly look into the thesis report for that (see section Thesis Report). 
 
 # Background Subtraction
