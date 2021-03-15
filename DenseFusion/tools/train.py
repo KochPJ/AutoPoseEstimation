@@ -19,6 +19,8 @@ from DenseFusion.datasets.myDatasetAugmented.dataset import PoseDataset
 from DenseFusion.lib.network import PoseNet, PoseRefineNet
 from DenseFusion.lib.loss import Loss
 from DenseFusion.lib.loss_refiner import Loss_refine
+#import matplotlib
+#matplotlib.use('Agg')
 from matplotlib import pyplot as plt
 import pc_reconstruction.open3d_utils as pc_utils
 import json
