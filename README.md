@@ -31,10 +31,10 @@ The steps 1, 7, 9, and 10 of the Terminal User Interface are hardware dependent 
 
 # Dependencies:
 
-1. Linux Distribution (we use Ubuntu 18.04)
-2. Nvidia GPU with CUDA (https://docs.nvidia.com/cuda/cuda-installation-guide-linux/index.html) and cuDNN (https://docs.nvidia.com/deeplearning/cudnn/install-guide/index.html). Find a version suited for our Pytorch. 
-4. Anaconda-Naviagtor (optional for python) https://www.anaconda.com/products/individual
-5. Realsense SDK (optional for your RealSense DepthCamera) https://github.com/IntelRealSense/librealsense/releases
+1. Linux Distribution (we use [Ubuntu 18.04 LTS](https://releases.ubuntu.com/18.04/))
+2. Nvidia GPU with [CUDA](https://docs.nvidia.com/cuda/cuda-installation-guide-linux/index.html) and [cuDNN](https://docs.nvidia.com/deeplearning/cudnn/install-guide/index.html). Find a version suited for your [Pytorch](https://pytorch.org/get-started/locally/) version.
+4. [Anaconda-Naviagtor](https://www.anaconda.com/products/individual) (optional for python)
+5. [Realsense SDK](https://github.com/IntelRealSense/librealsense/releases) and [pyrealsense2](https://pypi.org/project/pyrealsense2/)  (optional for your RealSense DepthCamera) 
 
 # Installation:
 
@@ -49,13 +49,13 @@ Run Terminal User Interface
 
 
 # Hardware
-In order to conduct your own grasping experiments or aquire new data you need a RGB-D Camera, an industrial robot armm, and a gripper. We use an "Realsense-435" depth camera, the "UR-5" robot arm, and the "Robotiq 2F-85" gripper. Futhermore, you need to find the hand-eye-calibration for your setup, and adapt the robot view points used for data acquisition and grasping.
+In order to conduct your own grasping experiments or aquire new data you need a RGB-D Camera, an industrial robot armm, and a gripper. We use an ["Realsense-435"](https://www.intelrealsense.com/depth-camera-d435/) depth camera, the ["UR-5 CB3"](https://www.universal-robots.com/cb3/) robot arm, and the ["Robotiq 2F-85"](https://robotiq.com/products/2f85-140-adaptive-robot-gripper) gripper. Futhermore, you need to find the hand-eye-calibration for your setup, and adapt the robot view points used for data acquisition and grasping.
 
-1. Robot and Gripper: We are not providing any drivers for the robot and gripper. If you want to use your own setup you will need to write your own drivers and comunication. We provide a "robot and gripper" controller in [a link](https://github.com/KochPJ/AutoPoseEstimation/blob/main/robot_controller/TestController.py) "robotcontroller/TestController.py". It uses a "robot and gripper" client to interact with the hardware. You can take this as a starting point to connect your hardware. Please make sure that all functions in the "RobotController"are callable. 
+1. Robot and Gripper: We are not providing any drivers for the robot and gripper. If you want to use your own setup you will need to write your own drivers and comunication. We provide a "robot and gripper" controller in ["robotcontroller/TestController.py"](https://github.com/KochPJ/AutoPoseEstimation/blob/main/robot_controller/TestController.py). It uses a "robot and gripper" client to interact with the hardware. You can take this as a starting point to connect your hardware. Please make sure that all functions in the ["RobotController"](https://github.com/KochPJ/AutoPoseEstimation/blob/b7e27e59aa1e5fd1f337615585ac569d41a74d03/robot_controller/TestController.py#L19) are callable. 
  
-2. Camera: If you want to use your own RGB-D Camera you can replace our DepthCam in ".depth_camera/DepthCam.py". Please make sure that the functions of the "DepthCam" are working simliar to our implementation. If you have a Realsense-435 you can use our DepthCam implementation. Please make sure you have installed the realsense sdk and pyrealsense2.
+2. Camera: If you want to use your own RGB-D Camera you can replace our [DepthCam](https://github.com/KochPJ/AutoPoseEstimation/blob/b7e27e59aa1e5fd1f337615585ac569d41a74d03/depth_camera/DepthCam.py#L6) in [".depth_camera/DepthCam.py"](https://github.com/KochPJ/AutoPoseEstimation/blob/main/depth_camera/DepthCam.py). Please make sure that the functions of the [DepthCam](https://github.com/KochPJ/AutoPoseEstimation/blob/b7e27e59aa1e5fd1f337615585ac569d41a74d03/depth_camera/DepthCam.py#L6) are working simliar to our implementation. If you have a Realsense-435 you can use our DepthCam implementation. Please make sure you have installed the realsense sdk and pyrealsense2 (see dependencies).
 
-3. Hand-Eye-Calibration: We use a aruco board for hand-eye-calibration. You can use our hand-eye-calibration implementations in the folder "hand_eye_calibration" to get the camera poses. However, in order to get the robot poses you need to implement your own robot controller first. We do not provide the implementation our hand-eye-calibration method, since we reused it from an other project and it is written in c++ with furhter requirements. 
+3. Hand-Eye-Calibration: We use a aruco board for hand-eye-calibration. You can use our hand-eye-calibration implementations in the folder "hand_eye_calibration" to get the camera poses. However, in order to get the robot poses you need to implement your own robot controller first. We do not provide the implementation our hand-eye-calibration method, since we reused it from an other project and it is written in c++ with furhter requirements. (our implementation is based on [CamOdoCal](https://github.com/hengli/camodocal)) 
 
 4. View-Points: The data aquireing requires a set of view points, which are unique to your setup. So remember to make your own set of viewpoints for your setup.The grasping also requires a set of viewpoints, which need to be updated according to your setup. Please find the viewpoints under ".robot_controller/robot_path". You can use the our path creation under ".robot_controller/createPath.py" or implement your own method. 
 
