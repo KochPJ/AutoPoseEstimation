@@ -65,11 +65,14 @@ All data used in the components of this project can be downloaded. A download li
 
 2. Generate labels: You can generate your own segmentation label, point cloud, and target pose with selection 3 and 4 of the Terminal User Interface. Otherwise, you can download our generated labels by following the instructions [here](https://github.com/KochPJ/AutoPoseEstimation/blob/main/label_generator/README.md).
 
+3. Extra Data: During data acquisition, we took every 50mm traveled an extra data sample, while the robot was moving. That data has no background image and a segmentation label can not be generated via background subtraction. However, we can use a segmentation model - once trained on the other data - to annotate the extra data. The extra data, in turn, can be used with the other data for the pose estimation training. However, experiments we conducted did not show any improvements when training with extra data. This might be due to poor labels related to motion blur and a time offset between the capured image and the robot pose. More detail can be found in the thesis report connected to this paper(see section Thesis Report below).
+
 # Background Subtraction
 If you want to investigate the training of our background subtraction model you can do that [here](https://github.com/KochPJ/AutoPoseEstimation/blob/b7e27e59aa1e5fd1f337615585ac569d41a74d03/background_subtraction/__init__.py). You can also download the data used for the training [here](https://github.com/KochPJ/AutoPoseEstimation/blob/b7e27e59aa1e5fd1f337615585ac569d41a74d03/background_subtraction/README.md)
 
 # Thesis Report
-This work is based on the MasterThesis by Paul Koch. If you are interested in more details, you can download the full thesis report [here](https://drive.google.com/file/d/14JZ0-bFKVdxH3xTPsmLR0Vqkz8tzS0uX/view?usp=sharing).
+This work is based on the MasterThesis by Paul Koch. If you are interested in more details, you can download the full thesis report [here](https://drive.google.com/file/d/14JZ0-bFKVdxH3xTPsmLR0Vqkz8tzS0uX/view?usp=sharing). 
+
 
 
 
