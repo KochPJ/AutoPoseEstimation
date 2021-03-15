@@ -10,7 +10,7 @@ Recently developed deep neural networks achieved state-of-the-art results in the
 
 
 # Terminal User Interface
-We created a Terminal User Interface to quickly test our implementations. You can run it with:
+We created a Terminal User Interface to quickly test our implementations. After setting up your hardware and installation, you can run it with:
 
 $ python main.py
 
@@ -28,23 +28,20 @@ The Terminal User Interface gives you the following options:
 
 The selections 1, 5, 6, and 7 of the Terminal User Interface are hardware dependent (please see the Hardware section for setup instructions). The rest of the selections can be used with either data aquired by your setup, or with our data (please see the Data section for download instructions). 
 
-
-# Dependencies:
-
+# Installation:
+Dependencies:
 1. Linux Distribution (we use [Ubuntu 18.04 LTS](https://releases.ubuntu.com/18.04/))
 2. Nvidia GPU with [CUDA](https://docs.nvidia.com/cuda/cuda-installation-guide-linux/index.html) and [cuDNN](https://docs.nvidia.com/deeplearning/cudnn/install-guide/index.html). Find a version suited for your [Pytorch](https://pytorch.org/get-started/locally/) version.
 4. [Anaconda-Naviagtor](https://www.anaconda.com/products/individual) (optional for python)
 5. [Realsense SDK](https://github.com/IntelRealSense/librealsense/releases) and [pyrealsense2](https://pypi.org/project/pyrealsense2/)  (optional for your RealSense DepthCamera) 
 
-# Installation:
-
-Install
+Install:
 1. $ conda create -n autoPose python=3.6
 2. $ conda activate autoPose
 4. $ cd your/path/AutoPoseEstimation
 5. $ pip install -r requirements.txt
 
-Run Terminal User Interface
+Run Terminal User Interface:
 1. $ python main.py
 
 
