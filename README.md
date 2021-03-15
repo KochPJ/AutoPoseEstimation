@@ -68,3 +68,6 @@ All data used in the components of this project can be downloaded. A download li
 
 3. Train Models: You can train our own segmentation and pose estimation models via step 4 and 6 of the Terminal User Interface, respectively. Please make sure you have created a corresponding dataset with setp 3 of the Terminal User Interface, or download our dataset by following the instructions [here](https://github.com/KochPJ/AutoPoseEstimation/blob/main/label_generator/README.md). You can also download our segmentation model [here](https://github.com/KochPJ/AutoPoseEstimation/blob/b7e27e59aa1e5fd1f337615585ac569d41a74d03/segmentation/README.md) and pose estimation model [here](https://github.com/KochPJ/AutoPoseEstimation/blob/main/DenseFusion/README_download.md). The training logs are included in the download as well. 
 
+# Background Subtraction
+If you want to investigate the training of our background subtraction model you can do that [here](https://github.com/KochPJ/AutoPoseEstimation/blob/b7e27e59aa1e5fd1f337615585ac569d41a74d03/background_subtraction/__init__.py). You can also download the data used for the training [here](https://github.com/KochPJ/AutoPoseEstimation/blob/b7e27e59aa1e5fd1f337615585ac569d41a74d03/background_subtraction/README.md)
+
