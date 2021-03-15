@@ -66,3 +66,8 @@ All data used in the components of this project can be downloaded. A download li
 # Background Subtraction
 If you want to investigate the training of our background subtraction model you can do that [here](https://github.com/KochPJ/AutoPoseEstimation/blob/b7e27e59aa1e5fd1f337615585ac569d41a74d03/background_subtraction/__init__.py). You can also download the data used for the training [here](https://github.com/KochPJ/AutoPoseEstimation/blob/b7e27e59aa1e5fd1f337615585ac569d41a74d03/background_subtraction/README.md)
 
+# Thesis Report
+This work is based on the MasterThesis by Paul Koch. If you are interested in more detail, you can download the full thesis report [here](https://drive.google.com/file/d/14JZ0-bFKVdxH3xTPsmLR0Vqkz8tzS0uX/view?usp=sharing).
+
+
+
