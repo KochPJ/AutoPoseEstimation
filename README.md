@@ -39,18 +39,6 @@ In order to conduct your own grasping experiments or aquire new data you need a 
 
 4. View-Points: The data aquireing requires a set of view points, which are unique to your setup. So remember to make your own set of viewpoints for your setup.The grasping also requires a set of viewpoints, which need to be updated according to your setup. Please find the viewpoints under ".robot_controller/robot_path". You can use the our path creation under ".robot_controller/createPath.py" or implement your own method. 
 
-
-# Hardware
-In order to conduct your own grasping experiments or aquire new data you need a RGB-D Camera, an industrial robot armm, and a gripper. We use an "Realsense-435" depth camera, the "UR-5" robot arm, and the "Robotiq 2F-85" gripper. 
-
-1. Robot and Gripper: We are not providing any drivers for the robot and gripper. If you want to use your own setup you will need to write your own drivers and comunication. We provide a "robot and gripper" controller in "robotcontroller/TestController.py". It uses a "robot and gripper" client to interact with the hardware. You can take this as a starting point to connect your hardware. Please make sure that all functions in the "RobotController"are callable. 
- 
-2. Camera: If you want to use your own RGB-D Camera you can replace our DepthCam in ".depth_camera/DepthCam.py". Please make sure that the functions of the "DepthCam" are working simliar to our implementation. If you have a Realsense-435 you can use our DepthCam implementation. Please make sure you have installed the realsense sdk and pyrealsense2.
-
-3. Hand-Eye-Calibration: We use a aruco board for hand-eye-calibration. You can use our hand-eye-calibration implementations in the folder "hand_eye_calibration" to get the camera poses. However, in order to get the robot poses you need to implement your own robot controller first. We do not provide the implementation our hand-eye-calibration method, since we reused it from an other project and it is written in c++ with furhter requirements. 
-
-4. View-Points: The data aquireing requires a set of view points, which are unique to your setup. So remember to make your own set of viewpoints for your setup.The grasping also requires a set of viewpoints, which need to be updated according to your setup. Please find the viewpoints under ".robot_controller/robot_path". You can use the our path creation under ".robot_controller/createPath.py" or implement your own method. 
-
 # Data
 All data used in the components of this project can be downloaded. A download link and instructions can be found in the readme of the each component. The comonents with data are "background_subtraction", "data_generation", "DenseFusion", "label_generator", "pc_reconstruction", and "segmentation". 
 
