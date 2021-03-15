@@ -32,15 +32,10 @@ The selections 1, 5, 6, and 7 of the Terminal User Interface are hardware depend
 Dependencies:
 1. Linux Distribution (we use [Ubuntu 18.04 LTS](https://releases.ubuntu.com/18.04/))
 2. Nvidia GPU with [CUDA](https://docs.nvidia.com/cuda/cuda-installation-guide-linux/index.html) and [cuDNN](https://docs.nvidia.com/deeplearning/cudnn/install-guide/index.html). Find a CUDA version suited for your [Pytorch](https://pytorch.org/get-started/locally/) version (We use CUDA11.0).
-4. [Anaconda-Naviagtor](https://www.anaconda.com/products/individual) (optional for python)
-5. [Realsense SDK](https://github.com/IntelRealSense/librealsense/releases) and [pyrealsense2](https://pypi.org/project/pyrealsense2/)  (optional for your RealSense DepthCamera) 
+3. Install python 3.6, we use for that [Anaconda-Naviagtor](https://www.anaconda.com/products/individual)
+4. [Realsense SDK](https://github.com/IntelRealSense/librealsense/releases) and [pyrealsense2](https://pypi.org/project/pyrealsense2/)  (optional for your RealSense DepthCamera) 
 
-Create Conda Environment:
-1. $ conda create -n autoPose python=3.6
-2. $ conda activate autoPose
-4. $ cd your/path/AutoPoseEstimation
-
-Python Packages, we put the vision we used in brackets: 
+Python 3.6 Packages (we put the pgk vision we used in brackets): 
 1. torch (torch==1.7.1+cu110)
 2. torchvision (0.8.2+cu110)
 3. open3d (0.9.0.0)
@@ -53,7 +48,6 @@ Python Packages, we put the vision we used in brackets:
 
 Run Terminal User Interface:
 1. $ python main.py
-
 
 # Hardware
 In order to conduct your own grasping experiments or aquire new data you need a RGB-D Camera, an industrial robot armm, and a gripper. We use an ["Realsense-435"](https://www.intelrealsense.com/depth-camera-d435/) depth camera, the ["UR-5 CB3"](https://www.universal-robots.com/cb3/) robot arm, and the ["Robotiq 2F-85"](https://robotiq.com/products/2f85-140-adaptive-robot-gripper) gripper. Futhermore, you need to find the hand-eye-calibration for your setup, and adapt the robot view points used for data acquisition and grasping.
