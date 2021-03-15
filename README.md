@@ -16,17 +16,17 @@ $ python main.py
 
 The Terminal User Interface gives you the following options:
 1. Acquire New Data from Object: Collects new data samples for a given object.
-2. Create Labels: Generates a segmentation label for each data sample of a given object via the background subtraction or an available trained segmentation model.
-3. Create Data Set: Creates a segmentation training data set or converts an existing segmentation training data set into a pose estimation training data set (Requires the pose labels).
-4. Train Segmentation Model: Trains a given segmentation model with a given segmentation training data set. 
-5. Create Pose labels: Generates the point clouds of the objects of a given segmentation data set and the finds the target object pose for each data sample based on the available segmentation label. 
-6. Train Pose Estimation Model: Trains a "Dense Fusion" 6D pose estimation model given a pose estimation training data set. 
-7. Run Live Prediction: Either predicts validation data samples of a pose estimation training data set or predicts an incoming camera stream of RGB-D images.
-8. Visualise: Visualises the created segmentation labels, the pose labels, and the object point clouds. 
-9. Teach Grasping: Allows the user to teach the robot to grasp the objects included in a given pose estimation training data set by demonstraction.
-10. Grasp objects: Given a trained pose estimation model and the corresponding trained segmentation model, the robot moves into a grasping position. The user can now request the robot to move to a predefined view point in order to perceive the known objects in the scene and their pose. Afterwards, the user can request the robot to grasp the objects one by one in a random order. A corresponding video can be found here: https://youtu.be/qPjmZSX0crU.
+2. Create Data Set: Creates a segmentation training data set or converts an existing segmentation training data set into a pose estimation training data set (Requires the pose labels).
+3. Create Labels: Generates a segmentation label for each data sample of a given object via the background subtraction or an available trained segmentation model.
+4. Create Pose labels: Generates the point clouds of the objects of a given segmentation data set and the finds the target object pose for each data sample based on the available segmentation label. 
+5. Grasp objects: Given a trained pose estimation model and the corresponding trained segmentation model, the robot moves into a grasping position. The user can now request the robot to move to a predefined view point in order to perceive the known objects in the scene and their pose. Afterwards, the user can request the robot to grasp the objects one by one in a random order. A corresponding video can be found here: https://youtu.be/qPjmZSX0crU.
+6. Run Live Prediction: Either predicts validation data samples of a pose estimation training data set or predicts an incoming camera stream of RGB-D images.
+7. Teach Grasping: Allows the user to teach the robot to grasp the objects included in a given pose estimation training data set by demonstraction.
+8. Train Segmentation Model: Trains a given segmentation model with a given segmentation training data set. 
+9. Train Pose Estimation Model: Trains a "Dense Fusion" 6D pose estimation model given a pose estimation training data set. 
+10. Visualise: Visualises the created segmentation labels, the pose labels, and the object point clouds. 
 
-The steps 1, 7, 9, and 10 of the Terminal User Interface are hardware dependent (please see the Hardware section for setup instructions). The rest of the steps can be used with either data aquired by your setup, or with our data (please see the Data section for download instructions). 
+The selections 1, 5, 6, and 7 of the Terminal User Interface are hardware dependent (please see the Hardware section for setup instructions). The rest of the selections can be used with either data aquired by your setup, or with our data (please see the Data section for download instructions). 
 
 
 # Dependencies:
@@ -64,9 +64,7 @@ All data used in the components of this project can be downloaded. A download li
 
 1. Aquired Data: If you do not have a hardware setup, you can download the RGB-D data aquired for this project follwing the instructions [here](https://github.com/KochPJ/AutoPoseEstimation/blob/b7e27e59aa1e5fd1f337615585ac569d41a74d03/data_generation/README.md).
 
-2. Generate labels: You can generate your own segmentation label, point cloud, and target pose with step 2 and 5 from the Terminal User Interface. Otherwise, you can download our generated labels by following the instructions [here](https://github.com/KochPJ/AutoPoseEstimation/blob/main/label_generator/README.md).
-
-3. Train Models: You can train our own segmentation and pose estimation models via step 4 and 6 of the Terminal User Interface, respectively. Please make sure you have created a corresponding dataset with setp 3 of the Terminal User Interface, or download our dataset by following the instructions [here](https://github.com/KochPJ/AutoPoseEstimation/blob/main/label_generator/README.md). You can also download our segmentation model [here](https://github.com/KochPJ/AutoPoseEstimation/blob/b7e27e59aa1e5fd1f337615585ac569d41a74d03/segmentation/README.md) and pose estimation model [here](https://github.com/KochPJ/AutoPoseEstimation/blob/main/DenseFusion/README_download.md). The training logs are included in the download as well. 
+2. Generate labels: You can generate your own segmentation label, point cloud, and target pose with selection 3 and 4 of the Terminal User Interface. Otherwise, you can download our generated labels by following the instructions [here](https://github.com/KochPJ/AutoPoseEstimation/blob/main/label_generator/README.md).
 
 # Background Subtraction
 If you want to investigate the training of our background subtraction model you can do that [here](https://github.com/KochPJ/AutoPoseEstimation/blob/b7e27e59aa1e5fd1f337615585ac569d41a74d03/background_subtraction/__init__.py). You can also download the data used for the training [here](https://github.com/KochPJ/AutoPoseEstimation/blob/b7e27e59aa1e5fd1f337615585ac569d41a74d03/background_subtraction/README.md)
