@@ -12,6 +12,8 @@ In order to conduct your own grasping experiments or aquire new data you need a 
 
 3. Hand-Eye-Calibration: We use a aruco board for hand-eye-calibration. You can use our hand-eye-calibration implementations in the folder "hand_eye_calibration" to get the camera poses. However, in order to get the robot poses you need to implement your own robot controller first. We do not provide the implementation our hand-eye-calibration method, since we reused it from an other project and it is written in c++ with furhter requirements. 
 
+4. View-Points: The data aquireing requires a set of view points, which are unique to your setup. So remember to make your own set of viewpoints for your setup.The grasping also requires a set of viewpoints, which need to be updated according to your setup. Please find the viewpoints under ".robot_controller/robot_path". You can use the our path creation under ".robot_controller/createPath.py" or implement your own method. 
+
 # Data
 All data used in the components of this project can be downloaded. A download link and instructions can be found in the readme of the each component.
 
