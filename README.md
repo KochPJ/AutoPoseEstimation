@@ -10,7 +10,7 @@ Recently developed deep neural networks achieved state-of-the-art results in the
 
 
 # Terminal User Interface
-We have created a Terminal User Interface to quickly test our implementations. You can run it with:
+We created a Terminal User Interface to quickly test our implementations. You can run it with:
 
 $ python main.py
 
