@@ -28,7 +28,7 @@ The Terminal User Interface gives you the following options:
 
 The selections 1, 5, 6, and 7 of the Terminal User Interface are hardware dependent (please see the Hardware section for setup instructions). The rest of the selections can be used with either data aquired by your setup, or with our data (please see the Data section for download instructions). 
 
-# Installation:
+# Installation
 Dependencies:
 1. Linux Distribution (we use [Ubuntu 18.04 LTS](https://releases.ubuntu.com/18.04/))
 2. Nvidia GPU with [CUDA](https://docs.nvidia.com/cuda/cuda-installation-guide-linux/index.html) and [cuDNN](https://docs.nvidia.com/deeplearning/cudnn/install-guide/index.html). Find a version suited for your [Pytorch](https://pytorch.org/get-started/locally/) version.
@@ -56,6 +56,8 @@ In order to conduct your own grasping experiments or aquire new data you need a 
 
 4. View-Points: The data aquireing requires a set of view points, which are unique to your setup. So remember to make your own set of viewpoints for your unique setup. The grasping also requires a set of viewpoints, which need to be updated according to your setup. Please find the viewpoints [here](https://github.com/KochPJ/AutoPoseEstimation/tree/b7e27e59aa1e5fd1f337615585ac569d41a74d03/robot_controller/robot_path). You can use our [path creation](https://github.com/KochPJ/AutoPoseEstimation/blob/b7e27e59aa1e5fd1f337615585ac569d41a74d03/robot_controller/createPath.py) or implement your own method. 
 
+5. Reference Point: In our setup we have defined a reference point
+
 # Data
 All data used in the components of this project can be downloaded. A download link and instructions can be found in the readme of the each component. The comonents with data are ["background_subtraction"](https://github.com/KochPJ/AutoPoseEstimation/tree/b7e27e59aa1e5fd1f337615585ac569d41a74d03/background_subtraction), ["data_generation"](https://github.com/KochPJ/AutoPoseEstimation/tree/b7e27e59aa1e5fd1f337615585ac569d41a74d03/data_generation), ["DenseFusion"](https://github.com/KochPJ/AutoPoseEstimation/tree/b7e27e59aa1e5fd1f337615585ac569d41a74d03/DenseFusion), ["label_generator"](https://github.com/KochPJ/AutoPoseEstimation/tree/b7e27e59aa1e5fd1f337615585ac569d41a74d03/label_generator), ["pc_reconstruction"](https://github.com/KochPJ/AutoPoseEstimation/tree/main/pc_reconstruction), and ["segmentation"](https://github.com/KochPJ/AutoPoseEstimation/tree/main/segmentation). 
 
@@ -67,7 +69,7 @@ All data used in the components of this project can be downloaded. A download li
 If you want to investigate the training of our background subtraction model you can do that [here](https://github.com/KochPJ/AutoPoseEstimation/blob/b7e27e59aa1e5fd1f337615585ac569d41a74d03/background_subtraction/__init__.py). You can also download the data used for the training [here](https://github.com/KochPJ/AutoPoseEstimation/blob/b7e27e59aa1e5fd1f337615585ac569d41a74d03/background_subtraction/README.md)
 
 # Thesis Report
-This work is based on the MasterThesis by Paul Koch. If you are interested in more detail, you can download the full thesis report [here](https://drive.google.com/file/d/14JZ0-bFKVdxH3xTPsmLR0Vqkz8tzS0uX/view?usp=sharing).
+This work is based on the MasterThesis by Paul Koch. If you are interested in more details, you can download the full thesis report [here](https://drive.google.com/file/d/14JZ0-bFKVdxH3xTPsmLR0Vqkz8tzS0uX/view?usp=sharing).
 
 
 
