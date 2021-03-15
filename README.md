@@ -28,6 +28,26 @@ The Terminal User Interface gives you the following options:
 
 The steps 1, 7, 9, and 10 of the Terminal User Interface are hardware dependent (please see the Hardware section for setup instructions). The rest of the steps can be used with either data aquired by your setup, or with our data (please see the Data section for download instructions). 
 
+
+# Dependencies:
+
+1. Linux Distribution (we use Ubuntu 18.04)
+2. Nvidia GPU with CUDA (https://docs.nvidia.com/cuda/cuda-installation-guide-linux/index.html) and cuDNN (https://docs.nvidia.com/deeplearning/cudnn/install-guide/index.html). Find a version suited for our Pytorch. 
+4. Anaconda-Naviagtor (optional for python) https://www.anaconda.com/products/individual
+5. Realsense SDK (optional for your RealSense DepthCamera) https://github.com/IntelRealSense/librealsense/releases
+
+# Installation:
+
+Install
+1. $ conda create -n autoPose python=3.6
+2. $ conda activate autoPose
+4. $ cd your/path/AutoPoseEstimation
+5. $ pip install -r requirements.txt
+
+Run Terminal User Interface
+1. $ python main.py
+
+
 # Hardware
 In order to conduct your own grasping experiments or aquire new data you need a RGB-D Camera, an industrial robot armm, and a gripper. We use an "Realsense-435" depth camera, the "UR-5" robot arm, and the "Robotiq 2F-85" gripper. Futhermore, you need to find the hand-eye-calibration for your setup, and adapt the robot view points used for data acquisition and grasping.
 
@@ -51,20 +71,5 @@ All data used in the components of this project can be downloaded. A download li
 
 
 
-# Installation:
-
-1. Download the data for each module as described in their README
-
-2. Implement your own robot/gripper client
-
-3. Install missing dependencies
-
-
-
-
-
-# Run:
-
-1. set the working direktory to the AutoPoseEstimation dir
 
 
