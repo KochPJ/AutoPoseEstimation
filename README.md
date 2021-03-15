@@ -1,8 +1,11 @@
-## AutoPoseEstimation
+
+## Generating Annotated Training Data for 6D Object Pose Estimation in Operational Environments with Minimal User Interaction
+This repository is the official implementation of the source code used in the paper "Generating Annotated Training Data for 6D Object Pose Estimation in Operational Environments with Minimal User Interaction" by Koch et al. 2021. 
+
 ![alt text](https://github.com/KochPJ/AutoPoseEstimation/blob/main/pipeline/data_gen.png)
 
 
-# Introduction
+# Abstract
 Recently developed deep neural networks achieved state-of-the-art results in the subject of 6D object pose estimation for robot manipulation. However, those supervised deep learning methods require expensive annotated training data. Current methods for reducing those costs frequently use synthetic data from simulations, but rely on expert knowledge and suffer from the domain gap when shifting to the real world. Here, we present a proof of concept for a novel approach of autonomously generating annotated training data for 6D object pose estimation. This approach is designed for learning new objects in operational environments while requiring little interaction and no expertise on the part of the user. We evaluate our autonomous data generation approach in two grasping experiments, where we archive a similar grasping success rate as related work on a non autonomously generated data set. 
 
 # Hardware
