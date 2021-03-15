@@ -31,15 +31,25 @@ The selections 1, 5, 6, and 7 of the Terminal User Interface are hardware depend
 # Installation
 Dependencies:
 1. Linux Distribution (we use [Ubuntu 18.04 LTS](https://releases.ubuntu.com/18.04/))
-2. Nvidia GPU with [CUDA](https://docs.nvidia.com/cuda/cuda-installation-guide-linux/index.html) and [cuDNN](https://docs.nvidia.com/deeplearning/cudnn/install-guide/index.html). Find a version suited for your [Pytorch](https://pytorch.org/get-started/locally/) version.
+2. Nvidia GPU with [CUDA](https://docs.nvidia.com/cuda/cuda-installation-guide-linux/index.html) and [cuDNN](https://docs.nvidia.com/deeplearning/cudnn/install-guide/index.html). Find a CUDA version suited for your [Pytorch](https://pytorch.org/get-started/locally/) version (We use CUDA11.0).
 4. [Anaconda-Naviagtor](https://www.anaconda.com/products/individual) (optional for python)
 5. [Realsense SDK](https://github.com/IntelRealSense/librealsense/releases) and [pyrealsense2](https://pypi.org/project/pyrealsense2/)  (optional for your RealSense DepthCamera) 
 
-Install:
+Create Conda Environment:
 1. $ conda create -n autoPose python=3.6
 2. $ conda activate autoPose
 4. $ cd your/path/AutoPoseEstimation
-5. $ pip install -r requirements.txt
+
+Python Packages, we put the vision we used in brackets: 
+1. torch (torch==1.7.1+cu110)
+2. torchvision (0.8.2+cu110)
+3. open3d (0.9.0.0)
+4. segmentation-models-pytorch (0.1.3) 
+5. Pillow (8.1.2)
+6. opencv-python (4.5.1.48)
+7. matplotlib (3.2.1)
+8. transforms3d (0.3.1)
+9. [optional] pyrealsense2 (2.33.1.1388)
 
 Run Terminal User Interface:
 1. $ python main.py
