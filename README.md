@@ -1,6 +1,10 @@
 
 ## Generating Annotated Training Data for 6D Object Pose Estimation in Operational Environments with Minimal User Interaction
-This repository is the official implementation of the source code used in the paper "Generating Annotated Training Data for 6D Object Pose Estimation in Operational Environments with Minimal User Interaction" by Koch et al. 2021. 
+This repository is the official implementation of the source code used in the preprint ["Generating Annotated Training Data for 6D Object Pose Estimation in Operational Environments with Minimal User Interaction"](https://arxiv.org/abs/2103.09696) by Paul Koch, Marian Schlüter, Serge Thill. The preprint is currently under peer review at [IROS2021](https://www.iros2021.org/).
+
+# Videos
+A complementary video for our paper can be found [here](https://youtu.be/mC6nAU3jkZQ).
+A video show casing our grasping experiments can be found [here](https://youtu.be/qPjmZSX0crU): 
 
 ![alt text](https://github.com/KochPJ/AutoPoseEstimation/blob/main/pipeline/data_gen.png)
 
@@ -83,7 +87,5 @@ If you want to investigate the training of our background subtraction model you 
 
 # Thesis Report
 This work is based on the MasterThesis by Paul Koch. If you are interested in more details, you can download the full thesis report [here](https://drive.google.com/file/d/14JZ0-bFKVdxH3xTPsmLR0Vqkz8tzS0uX/view?usp=sharing). 
-
-
 
 
