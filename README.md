@@ -1,6 +1,6 @@
 
 ## Generating Annotated Training Data for 6D Object Pose Estimation in Operational Environments with Minimal User Interaction
-This repository is the official implementation of the source code used in the preprint ["Generating Annotated Training Data for 6D Object Pose Estimation in Operational Environments with Minimal User Interaction"](https://arxiv.org/abs/2103.09696) by Paul Koch, Marian Schlüter, Serge Thill. The preprint is currently under peer review at [IROS2021](https://www.iros2021.org/).
+This repository is the official implementation of the source code used in the preprint ["Generating Annotated Training Data for 6D Object Pose Estimation in Operational Environments with Minimal User Interaction"](https://arxiv.org/abs/2103.09696) by Paul Koch, Marian Schlüter, Serge Thill. Unfortunately, the preprint got rejected at [IROS2021](https://www.iros2021.org/), we are currently planning further experiments to quantify our results.
 
 # Videos
 A complementary video for our paper can be found [here](https://youtu.be/mC6nAU3jkZQ).
