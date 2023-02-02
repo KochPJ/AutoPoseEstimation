@@ -1,5 +1,5 @@
 
-## Generating Annotated Training Data for 6D Object Pose Estimation in Operational Environments with Minimal User Interaction
+## Towards Robot-Assisted Data Generation with Minimal User Interaction for Autonomously Training 6D Pose Estimation in Operational Environments
 
 # Videos
 A complementary video for our paper can be found [here](https://youtu.be/mC6nAU3jkZQ).
